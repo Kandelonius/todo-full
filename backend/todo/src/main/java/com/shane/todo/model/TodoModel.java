@@ -12,7 +12,7 @@ public class TodoModel {
     // primary key of type long even though in this app it's extremely unlikely we'll exceed int capacity
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Long todoid;
+    private Long todoid;
 
     // set the completed to false by default
     private boolean completed = false;
