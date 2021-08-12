@@ -41,5 +41,5 @@ public class UserModel {
         this.password = password;
     }
 
-    
+
 }
