@@ -35,4 +35,12 @@ public class TodoModel {
     public TodoModel() {
     }
 
+    public Todos(
+            UserModel user,
+            String description)
+    {
+        this.user = user;
+        this.description = description;
+    }
+
 }
