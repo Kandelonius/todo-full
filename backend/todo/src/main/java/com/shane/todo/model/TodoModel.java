@@ -35,7 +35,7 @@ public class TodoModel {
     public TodoModel() {
     }
 
-    public Todos(
+    public TodoModel(
             UserModel user,
             String description)
     {
