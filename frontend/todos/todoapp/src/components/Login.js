@@ -25,7 +25,7 @@ const Login = props => {
             <h2>Log In!</h2>
             <form>
                 <div className = "form-group">
-                    <label for = "exampleInputUsername">Username </label>
+                    <label for = "exampleInputUsername">Username: </label>
                     <input 
                     type = "text" 
                     name = "username" 
@@ -33,7 +33,7 @@ const Login = props => {
                     placeholder = "Enter username" />
                 </div>
                 <div className="form-group">
-                    <label for="exampleInputPassword1">Password </label>
+                    <label for="exampleInputPassword1">Password: </label>
                     <input 
                     type="password" 
                     name = "password"
