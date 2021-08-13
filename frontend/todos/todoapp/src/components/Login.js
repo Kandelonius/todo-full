@@ -4,10 +4,6 @@ const Login = props => {
 
     const [item, setItem] = useState();
 
-    const handleMouseIn = (event) => {
-        alert("mouse in");
-    }
-
     React.useEffect(() => {
         // button.addEventListener('mousein', handleMouseIn);
     })
