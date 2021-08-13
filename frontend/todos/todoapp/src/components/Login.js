@@ -7,6 +7,7 @@ const Login = props => {
     React.useEffect(() => {
         // button.addEventListener('mousein', handleMouseIn);
     })
+
     const changeHandler = e => {
         e.persist();
         let value = e.target.value;
@@ -16,10 +17,22 @@ const Login = props => {
         });
     };
 
+    const loginStyle = {
+        border: '1px solid rebeccapurple',
+        borderRadius: '5px'
+    }
+
+    const formStyle = {
+        margin: 'auto',
+        padding: '10px',
+        width: '250px',
+        display: 'block'
+    }
+
     return (
-        <div className="login-input-form">
+        <div className="login-page" style = {loginStyle}>
             <h2>Log In!</h2>
-            <form>
+            <form style = {formStyle}>
                 <div className = "form-group">
                     <label for = "exampleInputUsername">Username: </label>
                     <input 
