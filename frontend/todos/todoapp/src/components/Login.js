@@ -4,10 +4,6 @@ const Login = props => {
 
     const [item, setItem] = useState();
 
-    React.useEffect(() => {
-        // button.addEventListener('mousein', handleMouseIn);
-    })
-
     const changeHandler = e => {
         e.persist();
         let value = e.target.value;
@@ -17,33 +13,48 @@ const Login = props => {
         });
     };
 
+    const handleSubmit = e => {
+        e.preventDefault();
+            const json = JSON.stringify(e, null, 4);
+            console.clear();
+            console.log(json);
+    }
+
     const loginStyle = {
         border: '1px solid rebeccapurple',
-        borderRadius: '5px'
+        borderRadius: '5px',
+        display: 'flex',
+        margin: '10% auto',
+        flexDirection: 'column',
+        height: '500'
     }
 
     const formStyle = {
-        margin: 'auto',
         padding: '10px',
-        width: '250px',
-        display: 'block'
+        width: '300px'
+    }
+
+    const divStyle = {
+        padding: '3%'
     }
 
     return (
         <div className="login-page" style = {loginStyle}>
             <h2>Log In!</h2>
-            <form style = {formStyle}>
-                <div className = "form-group">
+            <form style = {formStyle} onSubmit = {handleSubmit}>
+                <div style = {divStyle}>
                     <label for = "exampleInputUsername">Username: </label>
                     <input 
+                    onChange = {changeHandler}
                     type = "text" 
                     name = "username" 
                     value = {props.username} 
                     placeholder = "Enter username" />
                 </div>
-                <div className="form-group">
+                <div style = {divStyle}>
                     <label for="exampleInputPassword1">Password: </label>
-                    <input 
+                    <input
+                    onChange = {changeHandler}
                     type="password" 
                     name = "password"
                     value = {props.password} 
