@@ -1,23 +1,16 @@
 import React,{ useState, useEffect } from 'react';
 
 const Login = props => {
-
+    const[details, setDetails] = useState({name: "", password: ""});
     const [item, setItem] = useState();
 
-    const changeHandler = e => {
-        e.persist();
-        let value = e.target.value;
-        setItem({
-            ...item,
-            [e.target.name]: value
-        });
-    };
+    // const changeHandler = e => {
+    //     setDetails();
+    // };
 
     const handleSubmit = e => {
         e.preventDefault();
-            const json = JSON.stringify(e, null, 4);
-            console.clear();
-            console.log(json);
+        props.Login(details);
     }
 
     const loginStyle = {
@@ -44,21 +37,23 @@ const Login = props => {
             <form style = {formStyle} onSubmit = {handleSubmit}>
                 <div style = {divStyle}>
                     <label for = "exampleInputUsername">Username: </label>
-                    <input 
-                    onChange = {changeHandler}
-                    type = "text" 
-                    name = "username" 
-                    value = {props.username} 
-                    placeholder = "Enter username" />
+                    <input
+                    placeholder = "Enter username"
+                    type = "text"
+                    name = "username"
+                    onChange = {e => setDetails({
+                        ...details, name: e.target.value})} 
+                    value = {details.name}/>
                 </div>
                 <div style = {divStyle}>
                     <label for="exampleInputPassword1">Password: </label>
                     <input
-                    onChange = {changeHandler}
+                    placeholder="Password" 
                     type="password" 
                     name = "password"
-                    value = {props.password} 
-                    placeholder="Password" />
+                    onChange = {e => setDetails({
+                        ...details, password: e.target.value})} 
+                    value = {details.password} />
                 </div>
                 <button type="submit" class="btn btn-primary">Log In</button>
             </form>
