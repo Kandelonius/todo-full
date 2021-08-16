@@ -10,7 +10,7 @@ const Login = props => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        props.Login(details);
+        props.login(details);
     }
 
     const loginStyle = {

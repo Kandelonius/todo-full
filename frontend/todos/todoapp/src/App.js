@@ -6,6 +6,9 @@ import Todos from './components/Todos';
 import { Link, Route, Switch } from 'react-router-dom';
 
 function App() {
+  const Login = details => {
+    console.log(details);
+  }
   return (
     <div className="app">
       <nav className = "navbar">
