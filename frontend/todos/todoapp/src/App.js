@@ -1,14 +1,12 @@
 import './App.css';
 import React from 'react';
-import Login from './components/Login';
+import LoginForm from './components/LoginForm';
 import Home from './components/Home';
 import Todos from './components/Todos';
+import PrivateRoute from "./components/PrivateRoute";
 import { Link, Route, Switch } from 'react-router-dom';
 
 function App() {
-  const Login = details => {
-    console.log(details);
-  }
   return (
     <div className="app">
       <nav className = "navbar">
@@ -18,8 +16,8 @@ function App() {
       </nav>
       <Switch>
         <Route exact path = "/" component = {Home} />
-        <Route path = "/login" component = {Login} />
-        <Route path = "/todos" component = {Todos} />
+        <Route path = "/login" component = {LoginForm} />
+        <PrivateRoute exact path="/todos" component = {Todos} />
       </Switch>
     </div>
   );
