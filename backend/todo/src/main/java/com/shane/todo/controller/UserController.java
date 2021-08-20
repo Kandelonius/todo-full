@@ -34,7 +34,7 @@ public class UserController {
      * @see UserService#findAll() UserService.findAll()
      */
     @GetMapping(value = "/users",
-        produces = {"application/json"})
+            produces = {"application/json"})
     public ResponseEntity<?> listAllUsers() {
         List<UserModel> allUsers = userService.findAll();
         return new ResponseEntity<>(allUsers, HttpStatus.OK);
@@ -50,10 +50,9 @@ public class UserController {
      * @see UserService#findUserById(long) UserService.findUserById(long)
      */
     @GetMapping(value = "/{userid}",
-        produces = {"application/json"})
+            produces = {"application/json"})
     public ResponseEntity<?> getUserById(
             @PathVariable Long userid) {
-        //
         UserModel u = userService.findUserById(userid);
         return new ResponseEntity<>(u, HttpStatus.OK);
     }

@@ -33,8 +33,7 @@ public class H2ServerConfig {
     @Bean
     @ConditionalOnExpression("${h2.tcp.enabled:true}")
     public Server h2TcpServer() throws
-            SQLException
-    {
+            SQLException {
         return Server.createTcpServer("-tcp",
                         "-tcpAllowOthers",
                         "-tcpPort",
@@ -53,8 +52,7 @@ public class H2ServerConfig {
     @Bean
     @ConditionalOnExpression("${h2.web.enabled:true}")
     public Server h2WebServer() throws
-            SQLException
-    {
+            SQLException {
         return Server.createWebServer("-web",
                         "-webAllowOthers",
                         "-webPort",

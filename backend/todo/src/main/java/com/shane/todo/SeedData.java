@@ -18,7 +18,6 @@ public class SeedData implements CommandLineRunner {
     /**
      * Generates test, seed data for this application
      * First a set of known data is seeded into our database.
-     * Second a random set of data using Java Faker is seeded into our database.
      * Note this process does not remove data from the database. So if data exists in the database
      * prior to running this process, that data remains in the database.
      *

@@ -24,6 +24,7 @@ public interface UserService {
 
     /**
      * used for testing to get user ids
+     *
      * @return List<user>
      */
     List<UserModel> findAll();

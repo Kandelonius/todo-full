@@ -37,8 +37,7 @@ public class TodoModel {
 
     public TodoModel(
             UserModel user,
-            String description)
-    {
+            String description) {
         this.user = user;
         this.description = description;
     }

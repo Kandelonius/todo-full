@@ -8,7 +8,7 @@
 #### Database using H2
 
 <details>
-<summary>http://localhost:1092/user/1</summary>
+<summary>GET http://localhost:1092/user/1</summary>
 
 ```JSON
 {

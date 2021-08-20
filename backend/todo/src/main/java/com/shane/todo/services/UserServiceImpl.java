@@ -36,7 +36,7 @@ public class UserServiceImpl implements UserService {
     public UserModel save(UserModel user) {
         UserModel newUser = new UserModel();
 
-        if(user.getUserid() != 0) {
+        if (user.getUserid() != 0) {
             newUser.setUserid(user.getUserid());
         }
         newUser.setUsername(user.getUsername().toLowerCase());
@@ -46,7 +46,6 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
-     *
      * @return a list of users
      */
     @Override

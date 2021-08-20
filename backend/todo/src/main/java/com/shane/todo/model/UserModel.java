@@ -19,7 +19,7 @@ public class UserModel {
 
     // user name (String) must be unique, cannot be null
     @Column(nullable = false,
-        unique = true)
+            unique = true)
     private String username;
 
     // password, cannot be null. Never gets displayed
@@ -28,8 +28,8 @@ public class UserModel {
     private String password;
 
     @OneToMany(mappedBy = "user",
-    cascade = CascadeType.ALL,
-    orphanRemoval = true)
+            cascade = CascadeType.ALL,
+            orphanRemoval = true)
     @JsonIgnoreProperties(value = "user", allowSetters = true)
     private List<TodoModel> todos = new ArrayList<>();
 
