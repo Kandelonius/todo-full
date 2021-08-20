@@ -11,4 +11,6 @@ public interface UserService {
      * @return The given User or throws an exception if not found.
      */
     UserModel findUserById(Long userid);
+
+    UserModel save(UserModel user);
 }
