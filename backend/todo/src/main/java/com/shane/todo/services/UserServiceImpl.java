@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Implements the Userservice Interface
@@ -41,5 +43,16 @@ public class UserServiceImpl implements UserService {
         newUser.setPassword(user.getPassword());
 
         return userrepos.save(newUser);
+    }
+
+    /**
+     *
+     * @return a list of users
+     */
+    @Override
+    public List<UserModel> findAll() {
+        List<UserModel> list = new ArrayList<>();
+        userrepos.findAll().iterator().forEachRemaining(list::add);
+        return list;
     }
 }

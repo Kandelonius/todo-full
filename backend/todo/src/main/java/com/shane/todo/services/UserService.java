@@ -2,6 +2,8 @@ package com.shane.todo.services;
 
 import com.shane.todo.model.UserModel;
 
+import java.util.List;
+
 public interface UserService {
 
     /**
@@ -12,5 +14,17 @@ public interface UserService {
      */
     UserModel findUserById(Long userid);
 
+    /**
+     * used to save new users when one is posted
+     *
+     * @param user from UserModel
+     * @return a new user
+     */
     UserModel save(UserModel user);
+
+    /**
+     * used for testing to get user ids
+     * @return List<user>
+     */
+    List<UserModel> findAll();
 }
