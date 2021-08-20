@@ -30,12 +30,12 @@ class LoginForm extends Component {
         // set the token to localStorage (sessions)
         // navigate the user to the "/protected" route
         axiosWithAuth()
-      .post("http://localhost:5000/api/login", this.state.credentials)
-      .then(res => {
-        localStorage.setItem("token", res.data.payload);
-        this.props.history.push("/totos");
-      })
-      .catch(err => console.log(err));
+            .post("http://localhost:1982/user/login", this.state.credentials)
+            .then(res => {
+                localStorage.setItem("token", res.data.payload);
+                this.props.history.push("/todos");
+            })
+            .catch(err => console.log(err));
     };
 
     loginStyle = {
