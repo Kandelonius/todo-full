@@ -8,6 +8,18 @@
 #### Database using H2
 
 <details>
+<summary>http://localhost:1092/user/1</summary>
+
+```JSON
+{
+    "userid": 1,
+    "username": "john",
+    "todos": []
+}
+```
+</details>
+
+<details>
 <summary>POST http://localhost:1982/users/user</summary>
 
 DATA

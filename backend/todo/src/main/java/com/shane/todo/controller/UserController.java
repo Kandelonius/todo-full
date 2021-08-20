@@ -49,7 +49,7 @@ public class UserController {
      * request is sent to the Interface UserService which is handled by UserServiceImpl
      * @see UserService#findUserById(long) UserService.findUserById(long)
      */
-    @GetMapping(value = "{/userid}",
+    @GetMapping(value = "/{userid}",
         produces = {"application/json"})
     public ResponseEntity<?> getUserById(
             @PathVariable Long userid) {
@@ -57,5 +57,4 @@ public class UserController {
         UserModel u = userService.findUserById(userid);
         return new ResponseEntity<>(u, HttpStatus.OK);
     }
-
 }
