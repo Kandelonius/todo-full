@@ -22,6 +22,8 @@ public interface UserService {
      */
     UserModel save(UserModel user);
 
+    public UserModel findByName(String name);
+
     /**
      * used for testing to get user ids
      *

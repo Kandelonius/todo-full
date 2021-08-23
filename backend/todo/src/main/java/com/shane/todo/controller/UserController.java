@@ -25,6 +25,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping({ "/login" })
+    public String hello() {
+        return "Insert user here";
+    }
+
     /**
      * Returns a list of all users
      * <br>Example: <a href="http://localhost:1982/user/users">http://localhost:1982/user/users</a>
@@ -47,7 +52,7 @@ public class UserController {
      * @param userid The primary key of the user you seek
      * @return JSON object of the user you seek
      * request is sent to the Interface UserService which is handled by UserServiceImpl
-     * @see UserService#findUserById(long) UserService.findUserById(long)
+     * @see UserService #findUserById(long) UserService.findUserById(long)
      */
     @GetMapping(value = "/{userid}",
             produces = {"application/json"})

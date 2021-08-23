@@ -31,6 +31,16 @@ public class UserServiceImpl implements UserService {
                         ("User id " + userid + " not found"));
     }
 
+    public UserModel findByName(String name)
+    {
+        UserModel uu = userrepos.findByUsername(name.toLowerCase());
+        if (uu == null)
+        {
+            throw new EntityNotFoundException("User name " + name + " not found!");
+        }
+        return uu;
+    }
+
     @Transactional
     @Override
     public UserModel save(UserModel user) {
