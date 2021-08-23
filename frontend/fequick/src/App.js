@@ -44,11 +44,12 @@ const menialTasks = [
 ];
 const Container = styled.div`
 text-align: center;
-background-color: green;
+background-color: lightblue;
 border: 2px solid gray;
 padding 2%;
   button{
     background-color: gray;
+    margin-left: 5px;
   }
 `
 class App extends React.Component {

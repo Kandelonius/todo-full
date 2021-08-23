@@ -1,5 +1,15 @@
 .app {
   display: flex;
+  flex-direction: column;
   height: 100%;
   background-color: lightblue;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #87CEFA;
+  width: 100%;
+  padding: 20px;
 }
