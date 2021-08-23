@@ -86,9 +86,8 @@ class App extends React.Component {
       menialTasks: newTaskList
     })
   };
-  clearEndured = evt => {
-    // console.log(evt)
-    evt.preventDefault();
+  clearEndured = e => {
+    e.preventDefault();
     let menialTasks = this.state.menialTasks.filter(menialTasks => !menialTasks.endured);
     this.setState({ menialTasks });
    };
