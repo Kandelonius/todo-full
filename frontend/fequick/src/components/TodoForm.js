@@ -6,19 +6,19 @@ class TodoForm extends React.Component {
     constructor() {
         super();
         this.state = {
-            something: ""
+            chore: ""
         }
     }
-    handleChanges = evt => {
+    handleChanges = e => {
         this.setState({
-            something: evt.target.value
+            chore: e.target.value
         })
     }
-    submitForm = evt => {
-        evt.preventDefault();
-        this.props.addItem(this.state.something);
+    submitForm = e => {
+        e.preventDefault();
+        this.props.addItem(this.state.chore);
         this.setState({
-            something: ""
+            chore: ""
         });
     };
     render() {
@@ -28,7 +28,7 @@ class TodoForm extends React.Component {
                     onChange={this.handleChanges}
                     type="text"
                     name="task"
-                    value={this.state.something}
+                    value={this.state.chore}
                 />
                 <button onClick={this.props.handleClear}>Add</button>
             </form>

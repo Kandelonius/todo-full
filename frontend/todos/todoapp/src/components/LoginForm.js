@@ -47,6 +47,10 @@ class LoginForm extends Component {
         height: '500'
     }
 
+    h2Style = {
+      margin: '0 auto'
+    }
+
     formStyle = {
         padding: '10px',
         width: '300px'
@@ -59,7 +63,7 @@ class LoginForm extends Component {
     render() {
         return (
             <div className="login-page" style={this.loginStyle}>
-                <h2>Log In!</h2>
+                <h2 style={this.h2Style}>Log In!</h2>
                 <form style={this.formStyle} onSubmit={this.handleSubmit}>
                     <div style={this.divStyle}>
                         <label for="exampleInputUsername">Username: </label>
